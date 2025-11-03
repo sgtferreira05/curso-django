@@ -1,10 +1,10 @@
-{% extends "global\base.html" %}
+{% extends "global/base.html" %}
 {% block texto %}
     {{ text }} - Welcome to the Blog Page! The year is {{ year }}.
 {% endblock texto %}
 
 {%block posts %}
-    <div class="content">  {% for post in posts %}
-        {% include "global\partials\postblock.html" %}
+    {% for post in posts %}
+        {% include "global/partials/postblock.html" %}
     {% endfor %}
-    </div>  {%endblock posts %}
+{%endblock posts %}

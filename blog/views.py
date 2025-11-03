@@ -5,7 +5,7 @@ from blog.data import posts
 
 def blog(request):
     context= {
-        'text': 'Blog Page',
+        # 'text': 'Blog Page',
         'year': 2025,
         'posts': posts,
     }
@@ -15,12 +15,26 @@ def blog(request):
         context,
 )
 
+def post(request, id):
+    context= {
+        # 'text': 'Blog Page',
+        'year': 2025,
+        'posts': posts,
+    }
+    return render(
+        request,
+        'blog/index.html',
+        context,
+)
+
+
 def example(request):
     context= {
         'text': 'Example Blog Page',
-        'title': 'Ailton\'s Blog',
+        'title': 'Site do Ailton',
         'year': 2025,
-    }    
+    }
+ 
     return render(
         request,
         'blog/example.html',
