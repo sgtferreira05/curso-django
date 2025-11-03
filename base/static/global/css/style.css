@@ -21,6 +21,7 @@ body {
     display: grid;
     gap: 1.5rem;
     padding: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
 }
 
 .post {
@@ -28,6 +29,7 @@ body {
     padding: 1.5rem;
     box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
 }
+
 
 @media (min-width: 600px) {
     .content {
