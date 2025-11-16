@@ -1,9 +1,19 @@
+/* Reset */
 *,
 *:after,
 *:before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+a {
+    color: rgb(121, 121, 226);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(121, 121, 226);
+    text-decoration: underline;
 }
 
 html {
@@ -30,9 +40,25 @@ body {
     box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
+.menu {
+    background: #353434;
+    padding: 0 1.5rem;
+}
+
+.menu_links a {
+    display: block;
+    color: white;
+    list-style: none;
+    padding: 1.5rem;
+}
+
+.menu_links  {
+    list-style: none;
+    display: flex;
+}
 
 @media (min-width: 600px) {
-    .content {
+    .content:not(:has(.single-post)) {
         grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
     }
 }
